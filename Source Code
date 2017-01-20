@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Testing_File___CylinderCalculator
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Welcome to the Cylinder Calculator");
+            Console.Write("Enter the radius of the Cylinder");
+            string radiusAsString = Console.ReadLine();
+            double radius = Convert.ToDouble(radiusAsString);
+            Console.Write("Enter the Cylinders  Height");
+            string heightAsString = Console.ReadLine();
+            double height = Convert.ToDouble(heightAsString);
+            double PI = 3.141592654;
+            // Formular is V=πr2h
+            double volume = PI * radius * radius * height;
+            // Formular is SA=2πr(r+h)
+            double surfaceArea = 2 * PI * radius * (radius + height);
+            Console.WriteLine("The volume of the Cylinder is : " + volume + " Cubic units");
+            Console.WriteLine("The Surface Area of the Cylinder is : " + surfaceArea + "Square units");
+            Console.Write("       Good Bye!");
+            Console.ReadLine();
+
+        }
+    }
+}
